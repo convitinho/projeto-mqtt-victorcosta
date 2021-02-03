@@ -61,7 +61,7 @@ void loop() {
   if(estado_sensor == 0) {
       
         mensagem = mqttClient.publish("Porta_do_Rach", "0");
-        mensagem = mqttClient.publish("Porta_do_Rach", "FECHADO");
+        mensagem = mqttClient.publish("Porta_do_Rach_text", "FECHADO");
 
     } else {
       
@@ -72,8 +72,6 @@ void loop() {
 
   Serial.println(estado_sensor);
   
-  Serial.println();
-
   mqttClient.loop();
 
 }
